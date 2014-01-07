@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="WFRules" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2013-10.2.2">
+  <Role name="WorkflowService1">
+    <Instances count="2" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="jpgg" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBlTyzkBs0uzSIfq76IHjaswDQYJKoZIhvcNAQEBBQAEggEAYtC4/VqFecCNQSC34ISrE7qzv/gsrW6p0SOLWFOuBHNzMro3P3n18izi94xaZGhoLduxnWiqYAGLpDi5l56MRA2X1bFIB1W1hl6S3eDjzMO3m9rh7Bgk8QfEIN9bJL+u3Lj2D3iOO01FaW+VSdidD4BNDROrjPT3gpTWrZfL+FTUdRe1Tu7u/2BYXIJxe9wDSfLn2kkjYeppYDapzPhSfYyZnmMUlEr5P2yinNWGOXNsQq6ik24W8QcbsxqR1iEhiwwTDLkToejfOdaaZm2Wa638Dxi3uTn4VU0Et0wmzsZH626dzzPEBpWpcPWTf/amkaJNNULN8V+XJLBIcMBSajAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECDyV6JEL1hU7gBBfCjpUWMygLIjA5R086n8p" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-01-03T23:59:59.0000000-03:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="23BDB80E3A59A02E464758FCE793D9A0EBF4BE51" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

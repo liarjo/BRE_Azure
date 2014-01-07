@@ -1,0 +1,237 @@
+﻿<WorkflowService mc:Ignorable="sap sap2010 sads" p1:TextExpression.Namespaces="{x:Reference __ReferenceID4}" p1:TextExpression.References="{x:Reference __ReferenceID5}" ConfigurationName="srvEvalPersonaBatch" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="WorkflowService_1" Name="srvEvalPersonaBatch"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:h="clr-namespace:HelperBRE;assembly=HelperBRE"
+ xmlns:hs="clr-namespace:HelperBRE.SampleSubject;assembly=HelperBRE"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:p="http://tempuri.org/"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p1:Sequence DisplayName="Sequential Service" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <p1:TextExpression.Namespaces>
+      <sco:Collection x:TypeArguments="x:String" x:Name="__ReferenceID4">
+        <x:String>System</x:String>
+        <x:String>System.Collections.Generic</x:String>
+        <x:String>System.Data</x:String>
+        <x:String>System.Linq</x:String>
+        <x:String>System.Text</x:String>
+        <x:String>HelperBRE.SampleSubject</x:String>
+        <x:String>HelperBRE</x:String>
+      </sco:Collection>
+    </p1:TextExpression.Namespaces>
+    <p1:TextExpression.References>
+      <sco:Collection x:TypeArguments="p1:AssemblyReference" x:Name="__ReferenceID5">
+        <p1:AssemblyReference>Microsoft.CSharp</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.Data.Edm</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.Data.OData</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.Data.Services.Client</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.WindowsAzure.Configuration</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.WindowsAzure.Diagnostics</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.WindowsAzure.ServiceRuntime</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.WindowsAzure.Storage</p1:AssemblyReference>
+        <p1:AssemblyReference>Newtonsoft.Json</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data.DataSetExtensions</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data.Services.Client</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Spatial</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.ApplicationServices</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.DynamicData</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Drawing</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.Entity</p1:AssemblyReference>
+        <p1:AssemblyReference>System</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data.Entity</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Runtime.Serialization</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Channels</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.Extensions</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Workflow.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Workflow.ComponentModel</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Workflow.Runtime</p1:AssemblyReference>
+        <p1:AssemblyReference>System.WorkflowServices</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xaml</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xml</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xml.Linq</p1:AssemblyReference>
+        <p1:AssemblyReference>HelperBRE</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Core</p1:AssemblyReference>
+        <p1:AssemblyReference>mscorlib</p1:AssemblyReference>
+        <p1:AssemblyReference>WorkflowService1</p1:AssemblyReference>
+      </sco:Collection>
+    </p1:TextExpression.References>
+    <p1:Sequence.Variables>
+      <p1:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+      <p1:Variable x:TypeArguments="hs:Person[]" Name="data" />
+      <p1:Variable x:TypeArguments="h:BREClient" Name="BREClientWF4">
+        <p1:Variable.Default>
+          <mca:CSharpValue x:TypeArguments="h:BREClient">new BREClient("DefaultEndpointsProtocol=https;AccountName=rulestore;AccountKey=MmiI2ZhCoNosjLE9+8Vr8yYB1ZsL5X3oK/PZAR23repDB5+aVDJ0WiI2HcNAvqNXyjoPkHv5oM1Uon4XK+MA+g==")</mca:CSharpValue>
+        </p1:Variable.Default>
+      </p1:Variable>
+      <p1:Variable x:TypeArguments="x:String" Default="demo" Name="RuleContainer" />
+      <p1:Variable x:TypeArguments="x:String" Default="PersonCredit.xml" Name="RuleXmlFile" />
+    </p1:Sequence.Variables>
+    <Receive x:Name="__ReferenceID3" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_1" OperationName="EvalPersonaBatch" ServiceContractName="p:IService">
+      <Receive.CorrelationInitializers>
+        <RequestReplyCorrelationInitializer>
+          <RequestReplyCorrelationInitializer.CorrelationHandle>
+            <p1:InArgument x:TypeArguments="CorrelationHandle">
+              <mca:CSharpValue x:TypeArguments="CorrelationHandle">handle</mca:CSharpValue>
+            </p1:InArgument>
+          </RequestReplyCorrelationInitializer.CorrelationHandle>
+        </RequestReplyCorrelationInitializer>
+      </Receive.CorrelationInitializers>
+      <ReceiveMessageContent DeclaredMessageType="hs:Person[]">
+        <p1:OutArgument x:TypeArguments="hs:Person[]">
+          <mca:CSharpReference x:TypeArguments="hs:Person[]">data</mca:CSharpReference>
+        </p1:OutArgument>
+      </ReceiveMessageContent>
+    </Receive>
+    <p1:ForEach x:TypeArguments="hs:Person" DisplayName="ForEach&lt;Person&gt;" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+      <p1:ForEach.Values>
+        <p1:InArgument x:TypeArguments="scg:IEnumerable(hs:Person)">
+          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(hs:Person)">data</mca:CSharpValue>
+        </p1:InArgument>
+      </p1:ForEach.Values>
+      <p1:ActivityAction x:TypeArguments="hs:Person">
+        <p1:ActivityAction.Argument>
+          <p1:DelegateInArgument x:TypeArguments="hs:Person" Name="subject" />
+        </p1:ActivityAction.Argument>
+        <p1:Flowchart sap2010:WorkflowViewState.IdRef="Flowchart_1" StartNode="{x:Reference __ReferenceID2}">
+          <p1:FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_2">
+            <p1:InvokeMethod DisplayName="BRE Eval" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="RuleExecute">
+              <p1:InvokeMethod.TargetObject>
+                <p1:InArgument x:TypeArguments="h:BREClient">
+                  <mca:CSharpValue x:TypeArguments="h:BREClient">BREClientWF4</mca:CSharpValue>
+                </p1:InArgument>
+              </p1:InvokeMethod.TargetObject>
+              <p1:InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">RuleContainer</mca:CSharpValue>
+              </p1:InArgument>
+              <p1:InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">RuleXmlFile</mca:CSharpValue>
+              </p1:InArgument>
+              <p1:InArgument x:TypeArguments="x:Object">
+                <mca:CSharpValue x:TypeArguments="x:Object">subject</mca:CSharpValue>
+              </p1:InArgument>
+              <p1:InArgument x:TypeArguments="x:Boolean">True</p1:InArgument>
+            </p1:InvokeMethod>
+            <p1:FlowStep.Next>
+              <p1:FlowDecision x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                <p1:FlowDecision.Condition>
+                  <mca:CSharpValue x:TypeArguments="x:Boolean">subject.RuleEval</mca:CSharpValue>
+                </p1:FlowDecision.Condition>
+                <p1:FlowDecision.True>
+                  <p1:FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+                    <p1:Assign DisplayName="SalaryPlus" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <p1:Assign.To>
+                        <p1:OutArgument x:TypeArguments="x:Double">
+                          <mca:CSharpReference x:TypeArguments="x:Double">subject.Salary</mca:CSharpReference>
+                        </p1:OutArgument>
+                      </p1:Assign.To>
+                      <p1:Assign.Value>
+                        <p1:InArgument x:TypeArguments="x:Double">
+                          <mca:CSharpValue x:TypeArguments="x:Double">subject.Salary*1.1</mca:CSharpValue>
+                        </p1:InArgument>
+                      </p1:Assign.Value>
+                    </p1:Assign>
+                  </p1:FlowStep>
+                </p1:FlowDecision.True>
+              </p1:FlowDecision>
+            </p1:FlowStep.Next>
+          </p1:FlowStep>
+          <x:Reference>__ReferenceID0</x:Reference>
+          <x:Reference>__ReferenceID1</x:Reference>
+        </p1:Flowchart>
+      </p1:ActivityAction>
+    </p1:ForEach>
+    <SendReply Request="{x:Reference __ReferenceID3}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_1">
+      <SendMessageContent DeclaredMessageType="hs:Person[]">
+        <p1:InArgument x:TypeArguments="hs:Person[]">
+          <mca:CSharpValue x:TypeArguments="hs:Person[]">data</mca:CSharpValue>
+        </p1:InArgument>
+      </SendMessageContent>
+    </SendReply>
+    <sads:DebugSymbol.Symbol>d0NLOlxQcm9qZWN0c1x0ZXN0XFdGUnVsZXNcV29ya2Zsb3dTZXJ2aWNlMVxzcnZFdmFsUGVyc29uYUJhdGNoLnhhbWx4FhADogERAQFKC0r1AQEETTdNPQEDTjdOSQECUAVfDwFZYAWZARIBHZoBBaABEQEKXAtcWAFgVQ9VXAFaYwtjXwFTagmXARgBHp0BC50BUAELbA18HwE1gAETgAFiAS6EARWPASEBH3kReVYBTHs6ez4BS3MRc1wBRHYRdloBPW8Tb2ABNowBG4wBawEnhwEbhwFvASA=</sads:DebugSymbol.Symbol>
+  </p1:Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="644,86" />
+      <sap2010:ViewStateData Id="InvokeMethod_2" sap:VirtualizedContainerService.HintSize="218,130">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,62">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">9,389</av:Point>
+            <av:Size x:Key="ShapeSize">242,62</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowDecision_1" sap:VirtualizedContainerService.HintSize="70,87">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <av:Point x:Key="ShapeLocation">265,266.5</av:Point>
+            <av:Size x:Key="ShapeSize">70,87</av:Size>
+            <av:PointCollection x:Key="TrueConnector">265,310 130,310 130,389</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">191,105</av:Point>
+            <av:Size x:Key="ShapeSize">218,130</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,235 300,266.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="614,636">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,105</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="644,786">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="SendReply_1" sap:VirtualizedContainerService.HintSize="644,86" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="666,1162">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="307,406" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</WorkflowService>
